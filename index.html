@@ -199,9 +199,25 @@
      <br />
 </div>
  
-<div>
+<div id="clustrmaps-container">
    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=C-kMpX1YrjKsUCJ0s0UgylAOk2aayCLQexYx7031gEo"></script>
 </div>
+
+<style>
+  #clustrmaps-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+  }
+
+  #clustrmaps-container canvas {
+      width: 100%;
+      height: 100%;
+  }
+</style>
 
 <br>
 <br>
