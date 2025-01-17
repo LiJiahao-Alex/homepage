@@ -198,7 +198,8 @@
      <br />
      <br />
 </div>
- 
+
+
 <div id="clustrmaps-container">
    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=C-kMpX1YrjKsUCJ0s0UgylAOk2aayCLQexYx7031gEo"></script>
 </div>
@@ -212,14 +213,21 @@
       height: 150px;
       overflow: hidden;
   }
-
-  #clustrmaps-container canvas {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: 150px;
-      max-height: 150px;
-  }
 </style>
+
+<script>
+  // 等待 DOM 加载完成
+  document.addEventListener('DOMContentLoaded', function () {
+      // 获取动态生成的 canvas 元素
+      const canvas = document.querySelector('#clustrmaps-container canvas');
+      if (canvas) {
+          // 调整 canvas 尺寸
+          canvas.style.width = '100%';
+          canvas.style.height = '100%';
+      }
+  });
+</script>
+
 
 <br>
 <br>
