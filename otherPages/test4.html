@@ -1,14 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>李嘉豪(Alex.J.Lee)</title>
-  
-
-  
 <style type="text/css">
   #gg { position:fixed; bottom:0; background:#000; width:100%; height:35px; line-height:35px;text-align:center;}
   #gg a { color:#fff; font-size:14px; letter-spacing:2px; }
 </style>
-  
 <style>
   body {
       margin: 0;
@@ -41,6 +39,7 @@
       background-color: #555;
       color: white;
   }
+
   .tooltip {
       position: relative;
       display: inline-block;
@@ -48,10 +47,6 @@
 
   .tooltip .tooltiptext {
       visibility: hidden;
-      width: 80vw; /* 80% of viewport width */
-      max-width: 800px; /* Maximum width */
-      height: 80vh; /* 80% of viewport height */
-      max-height: 600px; /* Maximum height */
       background-color: white;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -62,7 +57,7 @@
       left: 50%;
       transform: translate(-50%, -50%); /* Center the container */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      overflow: auto; /* Add scroll if content overflows */
+      overflow: hidden; /* Hide overflow */
       opacity: 0;
       transition: opacity 0.3s;
   }
@@ -71,34 +66,20 @@
       width: 100%;
       height: 100%;
       border: none;
-      transform: scale(0.4); /* Scale down the PDF */
-      transform-origin: 0 0; /* Scale from top-left corner */
-  }
-
-  .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
   }
 </style>
 </head>
-
-<html>
-<body  bgcolor="#EEEEEE">
-  
-  
-
-  <ul> 
+<body bgcolor="#EEEEEE">
+<ul> 
    <li><a href="../index.html">Resume</a></li> 
    <li><a href="test.html">Awards</a></li> 
    <li><a href="test2.html">Publications</a></li> 
    <li><a href="test3.html">Projects</a></li> 
    <li><a class="active" href="test4.html">👉Services👈</a></li>
    <li><a href="test5.html">Videos</a></li> 
-
-
- </ul> 
+</ul> 
    
-  <div style="margin-left:15%;padding:1px 16px;background-color:#EEEEEE;">
+<div style="margin-left:15%;padding:1px 16px;background-color:#EEEEEE;">
     <br>
     <h2>Academic Services</h2>
     <hr />
@@ -106,18 +87,12 @@
     ■ Reviewer Invited by the 2025 IEEE International Conference on Multimedia & Expo (ICME 25')<br />
     ■ Reviewer Invited by the 2025 International Joint Conference on Neural Networks (IJCNN 25')<br />
     ■ Reviewer Invited by the 9th International Conference on Data Mining and Big Data (DMBD 24')<br />
-    <div class="tooltip">
-	■ Reviewer Invited by the 2024 Springer Nature · Abdominal Radiology
+    ■ <div class="tooltip">Reviewer Invited by the 2024 Springer Nature · Abdominal Radiology
         <span class="tooltiptext">
-            <iframe src="../pictures/ReviewerCertificateSpringer.png"></iframe>
+            <iframe id="pdf-iframe" src="path/to/your/pdf/file.pdf"></iframe>
         </span>
     </div><br />
-    <div class="tooltip">
-	■ Reviewer Invited by the 50th IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 25')
-        <span class="tooltiptext">
-            <iframe src="../pictures/ReviewerCertificatesICASSP.png"></iframe>
-        </span>
-    </div><br />
+    ■ Reviewer Invited by the 50th IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 25')<br />
     ■ Reviewer Invited by the 7th IEEE International Conference on Data Science and Information Technology (DIST 24')<br />
     ■ Reviewer Invited by the IEEE Transactions on Sustainable Computing (TSUSC)<br />
     ■ Reviewer Invited by the 16th Asian Conference on Machine Learning (ACML 24')<br />
@@ -158,7 +133,39 @@
       <div ><a  target="_blank">Think Different · Aim High · Dream Big | Create new world as challengers, leaders and change-makers.</a> </div>
 </div>
 
+<script>
+  // 获取悬停容器和iframe
+  const tooltip = document.querySelector('.tooltip');
+  const tooltiptext = document.querySelector('.tooltiptext');
+  const iframe = document.getElementById('pdf-iframe');
+
+  // 监听鼠标悬停事件
+  tooltip.addEventListener('mouseenter', () => {
+    // 动态设置容器大小为iframe内容的大小
+    iframe.onload = () => {
+      const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      const iframeBody = iframeDocument.body;
+
+      // 获取iframe内容的实际大小
+      const width = iframeBody.scrollWidth;
+      const height = iframeBody.scrollHeight;
+
+      // 设置悬停容器的大小
+      tooltiptext.style.width = `${width}px`;
+      tooltiptext.style.height = `${height}px`;
+
+      // 确保容器不超出视口
+      const maxWidth = window.innerWidth * 0.8; // 最大宽度为视口的80%
+      const maxHeight = window.innerHeight * 0.8; // 最大高度为视口的80%
+
+      if (width > maxWidth || height > maxHeight) {
+        const scale = Math.min(maxWidth / width, maxHeight / height);
+        tooltiptext.style.width = `${width * scale}px`;
+        tooltiptext.style.height = `${height * scale}px`;
+      }
+    };
+  });
+</script>
 
 </body>
 </html>
- 
