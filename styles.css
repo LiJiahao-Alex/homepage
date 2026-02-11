@@ -207,6 +207,7 @@ table tr:hover {
 /* 强制控制 clustrmaps 内部元素大小 */
 .map-container iframe,
 .map-container canvas {
-  width: 100% !important;
-  height: 100% !important;
+  width: 40% !important;
+  height: 40% !important;
 }
+
