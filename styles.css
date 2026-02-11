@@ -79,6 +79,13 @@ a:hover {
   border: 1px solid var(--border);
 }
 
+.hero > img {
+  grid-column: 1 / 2;
+}
+
+.hero > div:not(.map-box) {
+  grid-column: 2 / 3;
+}
 
 .hero img {
   border-radius: 12px;
@@ -195,6 +202,11 @@ table tr:hover {
 }
 
 .map-box {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: center;
+
   width: 200px;
   height: 140px;
   border-radius: 12px;
@@ -202,16 +214,14 @@ table tr:hover {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .map-box iframe,
 .map-box canvas {
-  width: 50% !important;
-  height: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
 }
+
 
 
 
