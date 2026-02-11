@@ -209,18 +209,20 @@ table tr:hover {
 
   width: 200px;
   height: 140px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  opacity: 0.85;
 }
 
-.map-box iframe,
+
+/* .map-box iframe,
 .map-box canvas {
   width: 100% !important;
   height: 100% !important;
-}
+} */
+
 
 
 
