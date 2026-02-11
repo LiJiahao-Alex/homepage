@@ -69,6 +69,7 @@ a:hover {
 
 .hero {
   display: grid;
+  position: relative;
   grid-template-columns: 120px 1fr 220px;
   align-items: center;
   gap: 20px;
@@ -79,13 +80,6 @@ a:hover {
   border: 1px solid var(--border);
 }
 
-.hero > img {
-  grid-column: 1 / 2;
-}
-
-.hero > div:not(.map-box) {
-  grid-column: 2 / 3;
-}
 
 .hero img {
   border-radius: 12px;
@@ -202,20 +196,33 @@ table tr:hover {
 }
 
 .map-box {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-  justify-self: end;
-  align-self: center;
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  opacity: 0.85;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  opacity: 0.9;
+  pointer-events: none;
 }
 
+.map-box iframe,
+.map-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  display: block !important;
+}
 
 
 
