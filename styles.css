@@ -198,16 +198,17 @@ table tr:hover {
   height: 180px;       /* 地图高度 */
   margin: 30px auto;   /* 居中 */
   overflow: hidden;    /* 防止溢出 */
-  border-radius: 10px;
+  /* border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--panel);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); */
 }
 
 /* 强制控制 clustrmaps 内部元素大小 */
 .map-container iframe,
 .map-container canvas {
-  width: 40% !important;
-  height: 40% !important;
+  width: 60% !important;
+  height: 60% !important;
 }
+
 
