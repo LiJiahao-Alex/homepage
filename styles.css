@@ -208,7 +208,7 @@ table tr:hover {
   align-self: center;
 
   width: 200px;
-  height: 140px;
+  height: 200px;
 
   border: none;
   background: transparent;
@@ -216,12 +216,6 @@ table tr:hover {
   opacity: 0.85;
 }
 
-
-/* .map-box iframe,
-.map-box canvas {
-  width: 100% !important;
-  height: 100% !important;
-} */
 
 
 
