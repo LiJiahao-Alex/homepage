@@ -69,7 +69,7 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 120px 1fr 220px;
   align-items: center;
   gap: 20px;
   padding: 32px;
@@ -78,6 +78,7 @@ a:hover {
   box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
   border: 1px solid var(--border);
 }
+
 
 .hero img {
   border-radius: 12px;
@@ -193,22 +194,24 @@ table tr:hover {
   }
 }
 
-.map-container {
-  width: 280px;        /* 地图宽度 */
-  height: 180px;       /* 地图高度 */
-  margin: 30px auto;   /* 居中 */
-  overflow: hidden;    /* 防止溢出 */
-  /* border-radius: 10px;
+.map-box {
+  width: 200px;
+  height: 140px;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  background: var(--panel);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); */
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 强制控制 clustrmaps 内部元素大小 */
-.map-container iframe,
-.map-container canvas {
-  width: 60% !important;
-  height: 60% !important;
+.map-box iframe,
+.map-box canvas {
+  width: 50% !important;
+  height: 50% !important;
 }
+
 
 
