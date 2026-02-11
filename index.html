@@ -1,79 +1,46 @@
 <head>
 <meta charset="utf-8">
 <title>李嘉豪(Jiahao Li)</title>
-  
-
-
-<style type="text/css">
-  #gg { position:fixed; bottom:0; background:#000; width:100%; height:35px; line-height:35px;text-align:center;}
-  #gg a { color:#fff; font-size:14px; letter-spacing:2px; }
-</style>
-  
-<style>
-  body {
-      margin: 0;
-  }
-
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 15%;
-      background-color: #E7E6E6;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-  }
-
-  li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-  }
-
-  li a.active {
-      background-color: #4CAF50;
-      color: white;
-  }
-
-  li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <html>
-<body  bgcolor="#EEEEEE">
+<body>
   
   
   
-  <ul>
+  <ul class="side-nav">
     <li><a class="active" href="index.html">👉Resume👈</a></li>
     <li><a href="otherPages/test.html">Awards</a></li>
     <li><a href="otherPages/test2.html">Publications</a></li>
     <li><a href="otherPages/test3.html">Projects</a></li>
     <li><a href="otherPages/test4.html">Services</a></li> 
     <li><a href="otherPages/test5.html">Videos</a></li> 
-
-
   </ul>
-  
-  <div style="margin-left:15%;padding:1px 16px;background-color:#EEEEEE;">
-    <div align="center">
-      <img src="pictures/myself.png" width="100" height="136" />
-      <h1>李嘉豪(Jiahao Li)</h1>
-      <h2>lijiahao@ict.ac.cn</h2>
+
+    <div class="content">
+    <div class="hero">
+      <img src="pictures/myself.png" width="120" height="160" />
+      <div>
+        <h1>李嘉豪 (Jiahao Li)</h1>
+        <h2>lijiahao@ict.ac.cn</h2>
+        <div class="quick-links">
+          <a href="index_CN.html">🔄切换至中文</a> |
+          <a href="CN_CV_Jiahao_Li.pdf">👨‍🎓CV (Chinese)</a> |
+          <a href="EN_CV_Jiahao_Li.pdf">👨‍🎓CV (English)</a> |
+          <a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ">🔬Google Scholar</a><br />
+          <a href="otherPages/test.html">🏆Awards</a> |
+          <a href="otherPages/test2.html">🚀Publications</a> |
+          <a href="otherPages/test3.html">🛠️Projects</a> |
+          <a href="otherPages/test4.html">🎈Services</a> |
+          <a href="otherPages/test5.html">📽️Videos</a>
+        </div>
+      </div>
     </div>
+   
 
-    <div align="center">
-		  <a href="index_CN.html">🔄切换至中文</a> | <a href="CN_CV_Jiahao_Li.pdf">👨‍🎓CV (Chinese)</a> | <a href="EN_CV_Jiahao_Li.pdf">👨‍🎓CV (English)</a> | <a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ"> 🔬Google Scholar</a><br />
-		 <a href="otherPages/test.html">🏆Awards</a> | <a href="otherPages/test2.html">🚀Publications</a> | <a href="otherPages/test3.html">🛠️Projects</a> | <a href="otherPages/test4.html">🎈Services</a> | <a href="otherPages/test5.html">📽️Videos</a>
-    </div>    
-
-    <br>
-		<p>
+    <div class="section">
+      <p>
 		I am an Assistant Professor at the 
 		<a href="http://english.ict.cas.cn/">Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS)</a>.
 		I obtained my B.S. degree in Computational Mathematics from 
@@ -93,134 +60,136 @@
 		I am always open to collaboration and welcome students who are interested in machine learning, computer vision, representation learning, and related areas in CS/ML/DL/AI.
 
 		</p>
-    <br>
-    <h2>Education</h2>
-    <hr />
+	</div>
 
-    <table>
-      <tr>
-        <td align="center"> </td>
-        <td align="center">UNIVERSITY</td>
-        <td align="center"></td>
-        <td align="center">DEPARTMENT</td>
-        <td align="center">MAJOR</td>
-        <td align="center">DEGREE</td>
-        <td align="center">TIME</td>
-      </tr>
-      
-      <tr>
-          <td align="center"> <img src="pictures/UCAS.png" width="50" height="50" /> </td>
-          <td>University of Chinese Academy of Sciences</td>
-          <td align="center"> <img src="pictures/ICT.png" width="50" height="50" /> </td>
-          <td>Institute of Computing Technology, <br>Chinese Academy of Sciences</td>
-          <td>Computer Science</td>
-		  <td align="center">Ph.D.</td>
-          <td>Sep/2020-Dec/2025</td>
-      </tr>
-      <tr>
-          <td align="center"> <img src="pictures/SDU.png" width="50" height="50" /> </td>
-          <td>Shandong University</td>
-          <td align="center"> <img src="pictures/MATH.png" width="50" height="25.2" /> </td>
-          <td align="center">Mathematics</td>
-          <td>Computational Mathematics</td>
-          <td align="center">B.S.</td>
-          <td>Sep/2016-Jun/2020</td>
-          <td></td>
-      </tr>
-    </table>
+    <div class="section">
+	    <h2>Education</h2>
+	    <hr />
+	    <table>
+	      <tr>
+	        <td align="center"> </td>
+	        <td align="center">UNIVERSITY</td>
+	        <td align="center"></td>
+	        <td align="center">DEPARTMENT</td>
+	        <td align="center">MAJOR</td>
+	        <td align="center">DEGREE</td>
+	        <td align="center">TIME</td>
+	      </tr>
+	      
+	      <tr>
+	          <td align="center"> <img src="pictures/UCAS.png" width="50" height="50" /> </td>
+	          <td>University of Chinese Academy of Sciences</td>
+	          <td align="center"> <img src="pictures/ICT.png" width="50" height="50" /> </td>
+	          <td>Institute of Computing Technology, <br>Chinese Academy of Sciences</td>
+	          <td>Computer Science</td>
+			  <td align="center">Ph.D.</td>
+	          <td>Sep/2020-Dec/2025</td>
+	      </tr>
+	      <tr>
+	          <td align="center"> <img src="pictures/SDU.png" width="50" height="50" /> </td>
+	          <td>Shandong University</td>
+	          <td align="center"> <img src="pictures/MATH.png" width="50" height="25.2" /> </td>
+	          <td align="center">Mathematics</td>
+	          <td>Computational Mathematics</td>
+	          <td align="center">B.S.</td>
+	          <td>Sep/2016-Jun/2020</td>
+	          <td></td>
+	      </tr>
+	    </table>
+    </div>
 
-    <br>
+    <div class="section">
     <h2>Experience</h2>
     <hr />
+	    <table>
+	      <tr>
+	        <td align="center"> </td>
+	        <td align="center">ORGANIZATION</td>
+	        <td align="center">CERTIFICATION</td>
+	        <td align="center">DEPARTMENT</td>
+	        <td align="center">POSITION</td>
+	        <td align="center">DUTY</td>
+	        <td align="center">TIME</td>
+	      </tr>
+	      <tr>
+	        <td align="center"> <img src="pictures/PCL.png" width="50" height="50" /> </td>
+	        <td>Pengcheng National Laboratory</td>
+	        <td>No.222030018</td>
+	        <td>Institute of Perceptual Intelligence,<br>Network Intelligence Department</td>
+	        <td>Research Assistant</td>
+	        <td>Anomaly Perception, Network Intelligence, Computer Vision</td>
+	        <td>Sep/2022-Dec/2025</td>
+	      </tr>
+	      <tr>
+	        <td align="center"> <img src="pictures/DEHOU.png" width="50" height="50" /> </td>
+	        <td>PRORICH Capital Group</td>
+	        <td>-</td>
+	        <td>Investment Department</td>
+	        <td>Investment Manager</td>
+	        <td>Private equity, Mergers & Acquisitions, Due Diligence, Fundraising</td>
+	        <td>Oct/2019-Sep/2020</td>
+	      </tr>
+	      <tr>
+	        <td align="center"> <img src="pictures/ALI.png" width="50" height="50" /> </td>
+	        <td>Alibaba Cloud Computing Co. Ltd.</td>
+	        <td>No.228854</td>
+	        <td>Intelligent Products Business Group,<br>Cloud Product R&D</td>
+	        <td>Algorithm Engineer</td>
+	        <td>Intelligent Scheduling, Anomaly Detection, Content Delivery Networks</td>
+	        <td>May/2019-Oct/2019</td>
+	
+	      </tr>
+	      <tr>
+	        <td align="center"> <img src="pictures/DTT.png" width="50" height="50" /> </td>
+	        <td>Deloitte Touche Tohmatsu <br>Certified Public Accountants LLP</td>
+	        <td>No.140815</td>
+	        <td>Audit and Assurance Department</td>
+	        <td>Auditor</td>
+	        <td>Audit working paper of the annual audit report of Antonoil (03337.HK).<br>Income Replacement Testing, Handling confirmation with Deloitte Global Delivery Center, Minutes of Meeting at Dubai Headquarters</td>
+	        <td>Jan/2018-Mar/2018</td>
+	
+	      </tr>
+	    </table>
+    </div>
 
-    <table>
-
-      <tr>
-        <td align="center"> </td>
-        <td align="center">ORGANIZATION</td>
-        <td align="center">CERTIFICATION</td>
-        <td align="center">DEPARTMENT</td>
-        <td align="center">POSITION</td>
-        <td align="center">DUTY</td>
-        <td align="center">TIME</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="pictures/PCL.png" width="50" height="50" /> </td>
-        <td>Pengcheng National Laboratory</td>
-        <td>No.222030018</td>
-        <td>Institute of Perceptual Intelligence,<br>Network Intelligence Department</td>
-        <td>Research Assistant</td>
-        <td>Anomaly Perception, Network Intelligence, Computer Vision</td>
-        <td>Sep/2022-Dec/2025</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="pictures/DEHOU.png" width="50" height="50" /> </td>
-        <td>PRORICH Capital Group</td>
-        <td>-</td>
-        <td>Investment Department</td>
-        <td>Investment Manager</td>
-        <td>Private equity, Mergers & Acquisitions, Due Diligence, Fundraising</td>
-        <td>Oct/2019-Sep/2020</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="pictures/ALI.png" width="50" height="50" /> </td>
-        <td>Alibaba Cloud Computing Co. Ltd.</td>
-        <td>No.228854</td>
-        <td>Intelligent Products Business Group,<br>Cloud Product R&D</td>
-        <td>Algorithm Engineer</td>
-        <td>Intelligent Scheduling, Anomaly Detection, Content Delivery Networks</td>
-        <td>May/2019-Oct/2019</td>
-
-      </tr>
-      <tr>
-        <td align="center"> <img src="pictures/DTT.png" width="50" height="50" /> </td>
-        <td>Deloitte Touche Tohmatsu <br>Certified Public Accountants LLP</td>
-        <td>No.140815</td>
-        <td>Audit and Assurance Department</td>
-        <td>Auditor</td>
-        <td>Audit working paper of the annual audit report of Antonoil (03337.HK).<br>Income Replacement Testing, Handling confirmation with Deloitte Global Delivery Center, Minutes of Meeting at Dubai Headquarters</td>
-        <td>Jan/2018-Mar/2018</td>
-
-      </tr>
-    </table>
-
-    <br>
+    <div class="section">
     <h2>Awards</h2>
     <hr />
-    <table>
-	  <tr>
-        <td>National Scholarship</td>
-        <td>0.20%</td>
-        <td>2025</td>
-      </tr>
-		
-      <tr>
-        <td>Merit Student in University of Chinese Academy of Sciences</td>
-        <td>8.13%</td>
-        <td>2024</td>
-      </tr>
-      
-      <tr>
-        <td>Merit Student in University of Chinese Academy of Sciences</td>
-        <td>8.97%</td>
-        <td>2023</td>
-      </tr>
-      
-      <tr>
-        <td>Outstanding Student of Shandong University</td>
-        <td>0.27%</td>
-        <td>2018</td>
-      </tr>
+	    <table>
+		  <tr>
+	        <td>National Scholarship</td>
+	        <td>0.20%</td>
+	        <td>2025</td>
+	      </tr>
+			
+	      <tr>
+	        <td>Merit Student in University of Chinese Academy of Sciences</td>
+	        <td>8.13%</td>
+	        <td>2024</td>
+	      </tr>
+	      
+	      <tr>
+	        <td>Merit Student in University of Chinese Academy of Sciences</td>
+	        <td>8.97%</td>
+	        <td>2023</td>
+	      </tr>
+	      
+	      <tr>
+	        <td>Outstanding Student of Shandong University</td>
+	        <td>0.27%</td>
+	        <td>2018</td>
+	      </tr>
+	
+	      <tr>
+	        <td>Deloitte China Innovation Elite Top 40</td>
+	        <td>0.02%</td>
+	        <td>2017</td>
+	      </tr>
+	          
+	    </table>
+	</div>
 
-      <tr>
-        <td>Deloitte China Innovation Elite Top 40</td>
-        <td>0.02%</td>
-        <td>2017</td>
-      </tr>
-          
-    </table>
-     <br />
-     <br />
+     <div class="spacer"></div>
 </div>
 
 
@@ -229,12 +198,6 @@
 </div>
 
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
 <div id="gg">
       <div ><a  target="_blank">Think Different · Aim High · Dream Big | Create new world as challengers, leaders and change-makers.</a> </div>
 </div>
