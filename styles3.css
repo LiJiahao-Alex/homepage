@@ -47,15 +47,24 @@ a:hover {
   height: 64px;
   padding: 0 56px;
 
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
 
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+  /* border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04); */
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+  0 8px 32px rgba(15, 23, 42, 0.08),
+  inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* 左侧：名字 / 品牌 */
+.top-nav.scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+}
+
 .top-nav .nav-brand {
   font-size: 20px;
   font-weight: 800;
@@ -211,7 +220,7 @@ table tr:hover {
   background: #eef2ff;
 }
 
-#gg {
+/* #gg {
   position: fixed;
   bottom: 0;
   background: #111827;
@@ -223,7 +232,24 @@ table tr:hover {
   font-weight: 600;
   letter-spacing: 0.2px;
   box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.12);
+} */
+
+#gg {
+  position: relative;
+  margin-top: 80px;
+  padding: 24px 20px;
+
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+
+  letter-spacing: 0.2px;
 }
+
 
 #gg a {
   color: #e5e7eb;
