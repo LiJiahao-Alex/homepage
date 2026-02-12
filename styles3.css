@@ -253,16 +253,15 @@ table tr:hover {
 }
 
 #gg a {
-  color: var(--accent);
+  color: #64748b; /* slate-500 */
   font-weight: 500;
-  opacity: 0.85;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 #gg a:hover {
-  color: var(--accent-2);
-  opacity: 1;
+  color: var(--accent);
 }
+
 
 
 
