@@ -231,6 +231,10 @@ table tr:hover {
   box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.12);
 } */
 
+/* #gg a {
+  color: #e5e7eb;
+} */
+
 #gg {
   position: sticky;
   bottom: 0;
@@ -248,11 +252,20 @@ table tr:hover {
   color: var(--muted);
 }
 
-
-
 #gg a {
-  color: #e5e7eb;
+  color: var(--accent);
+  font-weight: 500;
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
+
+#gg a:hover {
+  color: var(--accent-2);
+  opacity: 1;
+}
+
+
+
 
 .spacer {
   height: 90px;
