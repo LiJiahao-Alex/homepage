@@ -253,20 +253,21 @@ table tr:hover {
 } */
 
 #gg {
-  position: relative;   /* 不固定 */
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 28px;
-  line-height: 28px;
-  text-align: center;
+  height: 26px;
+  line-height: 26px;
 
-  background: transparent;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
   border-top: 1px solid var(--border);
 
-  color: var(--muted);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.3px;
+  color: var(--muted);
 }
+
 
 
 #gg a {
