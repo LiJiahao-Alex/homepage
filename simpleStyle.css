@@ -653,53 +653,169 @@ table tr:hover {
   white-space: nowrap;
 }
 
-.author-email {
-  display: inline-block;
-  margin-inline-start: 2px;
-  padding: 0 2px;
-  font-size: 0.72em;
+.publication-author sup {
+  margin-inline-start: 1px;
+}
+
+.publication-title-en {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .about-card h2 {
   margin: 0 0 14px;
 }
 
-.selected-papers,
-.service-summary {
+.selected-papers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .selected-papers li {
+  display: grid;
+  min-width: 0;
+}
+
+.paper-tile {
+  display: grid;
+  min-height: 116px;
+  border: 1px solid #dce2eb;
+  border-radius: 12px;
+  color: var(--text);
+  background: #f8fafc;
+  perspective: 800px;
+}
+
+.paper-tile:hover,
+.paper-tile:focus-visible {
+  color: var(--text);
+  border-color: #b6c9e8;
+}
+
+.paper-tile:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.paper-tile-front,
+.paper-tile-back {
+  grid-area: 1 / 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3px 16px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 14px 16px;
 }
 
-.selected-papers li > a {
+.paper-tile-title,
+.paper-tile-back > span:first-child {
+  color: var(--text);
   font-weight: 650;
+  line-height: 1.4;
 }
 
-.selected-papers li > span,
+.paper-tile-venue,
 .service-years {
   color: var(--muted);
   font-size: 13px;
 }
 
-.service-summary-row {
+.paper-tile-back {
+  visibility: hidden;
+  border-radius: inherit;
+  background: #edf3fa;
+}
+
+.paper-tile:focus-visible .paper-tile-front {
+  visibility: hidden;
+}
+
+.paper-tile:focus-visible .paper-tile-back {
+  visibility: visible;
+}
+
+@media (hover: hover) {
+  .paper-tile:hover .paper-tile-front {
+    visibility: hidden;
+  }
+
+  .paper-tile:hover .paper-tile-back {
+    visibility: visible;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .paper-tile-front,
+  .paper-tile-back {
+    visibility: visible;
+    backface-visibility: hidden;
+    transition: transform 0.35s ease;
+  }
+
+  .paper-tile-back {
+    transform: rotateX(-180deg);
+  }
+
+  .paper-tile:is(:hover, :focus-visible) .paper-tile-front {
+    visibility: visible;
+    transform: rotateX(180deg);
+  }
+
+  .paper-tile:is(:hover, :focus-visible) .paper-tile-back {
+    transform: rotateX(0);
+  }
+}
+
+.service-overview {
   display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
-  gap: 6px 16px;
-  align-items: baseline;
-  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.service-summary {
+  margin: 0;
+}
+
+.service-roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-roles > div,
+.service-reviews {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.service-reviews h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
 }
 
 .service-summary dt {
+  margin: 0 0 6px;
   font-weight: 650;
+}
+
+.service-reviews .service-summary-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 6px 14px;
+}
+
+.service-reviews .service-summary-row + .service-summary-row {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
 }
 
 .service-summary dd {
@@ -713,6 +829,7 @@ table tr:hover {
   padding: 2px 8px;
   border: 1px solid var(--border);
   border-radius: 6px;
+  background: var(--panel);
   font-size: 14px;
 }
 
@@ -720,11 +837,6 @@ table tr:hover {
   margin: 14px 0 0;
   font-size: 14px;
   font-weight: 600;
-}
-
-.service-profile {
-  margin: 0 0 12px;
-  font-size: 14px;
 }
 
 .publication-card {
@@ -740,11 +852,6 @@ table tr:hover {
   border-radius: 999px;
   color: #30476b;
   font-weight: 650;
-}
-
-.publication-rank:hover {
-  background: #eff6ff;
-  color: #1d4ed8;
 }
 
 .publication-location {
@@ -770,7 +877,8 @@ table tr:hover {
 
 @media (hover: hover) {
   .publication-card:hover,
-  .about-card:hover {
+  .about-card:hover,
+  .patent-card:hover {
     border-color: #b6c9e8;
     box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
   }
@@ -778,12 +886,14 @@ table tr:hover {
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .publication-card,
-  .about-card {
+  .about-card,
+  .patent-card {
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
 
   .publication-card:hover,
-  .about-card:hover {
+  .about-card:hover,
+  .patent-card:hover {
     transform: translateY(-3px);
   }
 }
@@ -825,7 +935,9 @@ table tr:hover {
     padding: 18px;
   }
 
-  .service-summary-row {
+  .selected-papers,
+  .service-roles,
+  .service-reviews .service-summary-row {
     grid-template-columns: minmax(0, 1fr);
   }
 }
