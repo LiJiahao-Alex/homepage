@@ -25,21 +25,21 @@
 
     <div class="content about-page">
 		<div class="hero">
-		  <img src="pictures/myself.png" width="120" height="160" />
-		  <div>
+		  <img class="hero-portrait" src="pictures/myself.png" width="160" height="200" alt="Portrait of Jiahao Li">
+		  <div class="hero-profile">
 			<h1>Jiahao Li</h1>
 			<h2><a href="mailto:lijiahao@ict.ac.cn">lijiahao@ict.ac.cn</a></h2>
 			<div class="quick-links">
-			  <a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ">🔬Google Scholar</a> |
-			  <a href="pages/publications.html">🚀Publications</a> <br />
-			  <a href="pages/awards.html">🏆Awards</a> |
-			  <a href="pages/projects.html">🛠️Projects</a> |
-			  <a href="pages/services.html">🎈Services</a> |
+			  <a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ">🔬Google Scholar</a>
+			  <a href="pages/publications.html">🚀Publications</a>
+			  <a href="pages/awards.html">🏆Awards</a>
+			  <a href="pages/projects.html">🛠️Projects</a>
+			  <a href="pages/services.html">🎈Services</a>
 			  <a href="pages/videos.html">📽️Videos</a>
 			</div>
 		  </div>
 
-		<div class="map-box" style="width:240px;height:200px;position:relative;overflow:hidden;border-radius:8px;pointer-events:auto;">
+		<div class="map-box" aria-hidden="true">
 			<canvas id="techCanvas"></canvas>
 			<script>
 				const canvas = document.getElementById('techCanvas');
@@ -270,114 +270,143 @@
 		<p class="collaboration-note"><strong>Open to research collaborations and student inquiries.</strong> If you are interested in machine learning, computer vision, representation learning, or related areas, please <a href="mailto:lijiahao@ict.ac.cn">email me</a>.</p>
 	</div>
 
-    <div class="section about-card">
-	    <h2>Education</h2>
-	    <hr />
-	    <table>
-	      <tr>
-	        <td align="center"> </td>
-	        <td align="center">UNIVERSITY</td>
-	        <td align="center"></td>
-	        <td align="center">DEPARTMENT</td>
-	        <td align="center">MAJOR</td>
-	        <td align="center">DEGREE</td>
-	        <td align="center">TIME</td>
-	      </tr>
-	      
-	      <tr>
-	          <td align="center"> <img src="pictures/UCAS.png" width="50" height="50" /> </td>
-	          <td>University of Chinese Academy of Sciences</td>
-	          <td align="center"> <img src="pictures/ICT.png" width="50" height="50" /> </td>
-	          <td>Institute of Computing Technology, <br>Chinese Academy of Sciences</td>
-	          <td>Computer Science</td>
-			  <td align="center">Ph.D.</td>
-	          <td>Sep/2020-Dec/2025</td>
-	      </tr>
-	      <tr>
-	          <td align="center"> <img src="pictures/SDU.png" width="50" height="50" /> </td>
-	          <td>Shandong University</td>
-	          <td align="center"> <img src="pictures/MATH.png" width="50" height="25.2" /> </td>
-	          <td align="center">Mathematics</td>
-	          <td>Computational Mathematics</td>
-	          <td align="center">B.S.</td>
-	          <td>Sep/2016-Jun/2020</td>
-	      </tr>
-	    </table>
-    </div>
+    <section class="section about-card" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <ul class="profile-list education-list">
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/UCAS.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>University of Chinese Academy of Sciences</h3>
+              <p class="profile-date">Sep/2020-Dec/2025</p>
+            </div>
+          </div>
+          <p class="profile-degree">Ph.D. · Computer Science</p>
+          <p class="profile-department"><img class="profile-logo department-logo" src="pictures/ICT.png" width="48" height="48" alt="" loading="lazy"> <span>Institute of Computing Technology, Chinese Academy of Sciences</span></p>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/SDU.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>Shandong University</h3>
+              <p class="profile-date">Sep/2016-Jun/2020</p>
+            </div>
+          </div>
+          <p class="profile-degree">B.S. · Computational Mathematics</p>
+          <p class="profile-department"><img class="profile-logo department-logo" src="pictures/MATH.png" width="48" height="48" alt="" loading="lazy"> <span>Mathematics</span></p>
+        </li>
+      </ul>
+    </section>
 
-    <div class="section about-card">
-    <h2>Experience</h2>
-    <hr />
-	    <table>
-	      <tr>
-	        <td align="center"> </td>
-	        <td align="center">ORGANIZATION</td>
-	        <td align="center">CERTIFICATION</td>
-	        <td align="center">DEPARTMENT</td>
-	        <td align="center">POSITION</td>
-	        <td align="center">DUTY</td>
-	        <td align="center">TIME</td>
-	      </tr>
-	      <tr>
-	        <td align="center"> <img src="pictures/PCL.png" width="50" height="50" /> </td>
-	        <td>Pengcheng National Laboratory</td>
-	        <td>No.222030018</td>
-	        <td>Institute of Perceptual Intelligence,<br>Network Intelligence Department</td>
-	        <td>Research Assistant</td>
-	        <td>Anomaly Perception, Network Intelligence, Computer Vision</td>
-	        <td>Sep/2022-Dec/2025</td>
-	      </tr>
-	      <tr>
-	        <td align="center"> <img src="pictures/DEHOU.png" width="50" height="50" /> </td>
-	        <td>PRORICH Capital Group</td>
-	        <td>-</td>
-	        <td>Investment Department</td>
-	        <td>Assistant to Chairman</td>
-	        <td>Private equity, Mergers & Acquisitions, Due Diligence, Fundraising</td>
-	        <td>Oct/2019-Sep/2020</td>
-	      </tr>
-	      <tr>
-	        <td align="center"> <img src="pictures/ALI.png" width="50" height="50" /> </td>
-	        <td>Alibaba Cloud Computing Co. Ltd.</td>
-	        <td>No.228854</td>
-	        <td>Intelligent Products Business Group,<br>Cloud Product R&D</td>
-	        <td>Algorithm Engineer</td>
-	        <td>Intelligent Scheduling, Anomaly Detection, Content Delivery Networks</td>
-	        <td>May/2019-Oct/2019</td>
-	
-	      </tr>
-	      <tr>
-	        <td align="center"> <img src="pictures/DTT.png" width="50" height="50" /> </td>
-	        <td>Deloitte Touche Tohmatsu <br>Certified Public Accountants LLP</td>
-	        <td>No.140815</td>
-	        <td>Audit and Assurance Department</td>
-	        <td>Auditor</td>
-	        <td>Audit working paper of the annual audit report of Antonoil (03337.HK).<br>Income Replacement Testing, Handling confirmation with Deloitte Global Delivery Center, Minutes of Meeting at Dubai Headquarters</td>
-	        <td>Jan/2018-Mar/2018</td>
-	
-	      </tr>
-	    </table>
-    </div>
+    <section class="section about-card" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <ol class="profile-list experience-list">
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/PCL.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="profile-organization">Pengcheng National Laboratory</p>
+            </div>
+            <p class="profile-date">Sep/2022-Dec/2025</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>Department</dt><dd>Institute of Perceptual Intelligence, Network Intelligence Department</dd></div>
+            <div><dt>Responsibilities</dt><dd>Anomaly Perception, Network Intelligence, Computer Vision</dd></div>
+            <div><dt>Certification</dt><dd>No.222030018</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/DEHOU.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>Assistant to Chairman</h3>
+              <p class="profile-organization">PRORICH Capital Group</p>
+            </div>
+            <p class="profile-date">Oct/2019-Sep/2020</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>Department</dt><dd>Investment Department</dd></div>
+            <div><dt>Responsibilities</dt><dd>Private equity, Mergers & Acquisitions, Due Diligence, Fundraising</dd></div>
+            <div><dt>Certification</dt><dd>-</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/ALI.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>Algorithm Engineer</h3>
+              <p class="profile-organization">Alibaba Cloud Computing Co. Ltd.</p>
+            </div>
+            <p class="profile-date">May/2019-Oct/2019</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>Department</dt><dd>Intelligent Products Business Group, Cloud Product R&D</dd></div>
+            <div><dt>Responsibilities</dt><dd>Intelligent Scheduling, Anomaly Detection, Content Delivery Networks</dd></div>
+            <div><dt>Certification</dt><dd>No.228854</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="pictures/DTT.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>Auditor</h3>
+              <p class="profile-organization">Deloitte Touche Tohmatsu Certified Public Accountants LLP</p>
+            </div>
+            <p class="profile-date">Jan/2018-Mar/2018</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>Department</dt><dd>Audit and Assurance Department</dd></div>
+            <div><dt>Responsibilities</dt><dd>Audit working paper of the annual audit report of Antonoil (03337.HK).<br>Income Replacement Testing, Handling confirmation with Deloitte Global Delivery Center, Minutes of Meeting at Dubai Headquarters</dd></div>
+            <div><dt>Certification</dt><dd>No.140815</dd></div>
+          </dl>
+        </li>
+      </ol>
+    </section>
 
-    <div class="section about-card">
-    <h2>Selected Awards</h2>
-    <hr />
-	    <table>
-      <thead>
-        <tr><th scope="col">Award</th><th scope="col">Award rate</th><th scope="col">Year</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Outstanding Graduate of Beijing Municipal Institutions of Higher Education</td><td>5.00%</td><td>2026</td></tr>
-        <tr><td>Outstanding Graduate of University of Chinese Academy of Sciences</td><td>5.00%</td><td>2026</td></tr>
-        <tr><td>National Scholarship</td><td>0.20%</td><td>2025</td></tr>
-        <tr><td>Merit Student in University of Chinese Academy of Sciences</td><td>8.13%</td><td>2024</td></tr>
-        <tr><td>Merit Student in University of Chinese Academy of Sciences</td><td>8.97%</td><td>2023</td></tr>
-        <tr><td>Outstanding Student of Shandong University</td><td>0.27%</td><td>2018</td></tr>
-        <tr><td>Deloitte China Innovation Elite Top 40</td><td>0.02%</td><td>2017</td></tr>
-      </tbody>
-    </table>
-    <p class="section-more"><a href="pages/awards.html">All awards...</a></p>
-	</div>
+    <section class="section about-card" aria-labelledby="selected-awards-heading">
+      <h2 id="selected-awards-heading">Selected Awards</h2>
+      <ol class="award-timeline">
+        <li class="award-year">
+          <time datetime="2026">2026</time>
+          <ul>
+            <li><span>Outstanding Graduate of Beijing Municipal Institutions of Higher Education</span><span class="award-rate">Award rate <strong>5.00%</strong></span></li>
+            <li><span>Outstanding Graduate of University of Chinese Academy of Sciences</span><span class="award-rate">Award rate <strong>5.00%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2025">2025</time>
+          <ul>
+            <li><span>National Scholarship</span><span class="award-rate">Award rate <strong>0.20%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2024">2024</time>
+          <ul>
+            <li><span>Merit Student in University of Chinese Academy of Sciences</span><span class="award-rate">Award rate <strong>8.13%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2023">2023</time>
+          <ul>
+            <li><span>Merit Student in University of Chinese Academy of Sciences</span><span class="award-rate">Award rate <strong>8.97%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2018">2018</time>
+          <ul>
+            <li><span>Outstanding Student of Shandong University</span><span class="award-rate">Award rate <strong>0.27%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2017">2017</time>
+          <ul>
+            <li><span>Deloitte China Innovation Elite Top 40</span><span class="award-rate">Award rate <strong>0.02%</strong></span></li>
+          </ul>
+        </li>
+      </ol>
+      <p class="section-more"><a href="pages/awards.html">All awards...</a></p>
+    </section>
 
     <section class="section about-card" aria-labelledby="selected-papers-heading">
       <h2 id="selected-papers-heading">Selected Papers</h2>
@@ -389,8 +418,11 @@
               <span class="paper-tile-title" id="selected-paper-1">Wavelet Domain Steganography for Robust Unlearnable Data</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>Wavelet-domain protection for training data</span>
-              <span class="paper-tile-venue">View paper →</span>
+              <span class="paper-tile-back-copy">
+                <span>Wavelet-domain protection for training data</span>
+                <span class="paper-tile-venue">View paper →</span>
+              </span>
+              <img src="pictures/papers/wavelet-domain-steganography.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -401,8 +433,11 @@
               <span class="paper-tile-title" id="selected-paper-2">GSM: Global Semantic Memory</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>Global semantics for anomaly detection</span>
-              <span class="paper-tile-venue">View paper →</span>
+              <span class="paper-tile-back-copy">
+                <span>Global semantics for anomaly detection</span>
+                <span class="paper-tile-venue">View paper →</span>
+              </span>
+              <img src="pictures/papers/global-semantic-memory.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -413,8 +448,11 @@
               <span class="paper-tile-title" id="selected-paper-3">K-Space Bispectrum Steganography for Robust Unlearnable Data</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>Training-data protection with Fourier steganography</span>
-              <span class="paper-tile-venue">View paper →</span>
+              <span class="paper-tile-back-copy">
+                <span>Training-data protection with Fourier steganography</span>
+                <span class="paper-tile-venue">View paper →</span>
+              </span>
+              <img src="pictures/papers/k-space-bispectrum-steganography.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -425,8 +463,11 @@
               <span class="paper-tile-title" id="selected-paper-4">Memory Mechanism for Unsupervised Anomaly Detection</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>Memory-guided reconstruction for anomaly detection</span>
-              <span class="paper-tile-venue">View paper →</span>
+              <span class="paper-tile-back-copy">
+                <span>Memory-guided reconstruction for anomaly detection</span>
+                <span class="paper-tile-venue">View paper →</span>
+              </span>
+              <img src="pictures/papers/memory-mechanism.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>

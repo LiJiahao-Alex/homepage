@@ -25,22 +25,22 @@
 
   <div class="content about-page">
     <div class="hero">
-      <img src="../pictures/myself.png" width="120" height="160" />
-	  <div>
+      <img class="hero-portrait" src="../pictures/myself.png" width="160" height="200" alt="李嘉豪的照片">
+	  <div class="hero-profile">
 	      <h1>李嘉豪</h1>
 	      <h2><a href="mailto:lijiahao@ict.ac.cn">lijiahao@ict.ac.cn</a></h2>
 
 			<div class="quick-links">
-				<a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ">🔬谷歌学者</a> |
-				<a href="publications_CN.html">🚀成果</a> <br />
-				<a href="awards_CN.html">🏆奖项</a> |
-				<a href="projects_CN.html">🛠️项目</a> |
-				<a href="services_CN.html">🎈服务</a> |
+				<a href="https://scholar.google.com/citations?hl=en&user=aNFn6jkAAAAJ">🔬谷歌学者</a>
+				<a href="publications_CN.html">🚀成果</a>
+				<a href="awards_CN.html">🏆奖项</a>
+				<a href="projects_CN.html">🛠️项目</a>
+				<a href="services_CN.html">🎈服务</a>
 				<a href="videos_CN.html">📽️视频</a>
 		    </div>
 	 </div>
 
-        <div class="map-box" style="width:240px;height:200px;position:relative;overflow:hidden;border-radius:8px;pointer-events:auto;">
+        <div class="map-box" aria-hidden="true">
         <canvas id="techCanvas"></canvas>
         <script>
             const canvas = document.getElementById('techCanvas');
@@ -270,117 +270,143 @@
 
     </div>
 
-    <div class="section about-card">
-    <h2>教育</h2>
-    <hr />
+    <section class="section about-card" aria-labelledby="education-heading">
+      <h2 id="education-heading">教育</h2>
+      <ul class="profile-list education-list">
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/UCAS.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>中国科学院大学</h3>
+              <p class="profile-date">2020年09月至2025年12月</p>
+            </div>
+          </div>
+          <p class="profile-degree">工学博士 · 计算机科学与技术</p>
+          <p class="profile-department"><img class="profile-logo department-logo" src="../pictures/ICT.png" width="48" height="48" alt="" loading="lazy"> <span>中国科学院计算技术研究所</span></p>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/SDU.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>山东大学</h3>
+              <p class="profile-date">2016年09月至2020年06月</p>
+            </div>
+          </div>
+          <p class="profile-degree">理学学士 · 计算数学</p>
+          <p class="profile-department"><img class="profile-logo department-logo" src="../pictures/MATH.png" width="48" height="48" alt="" loading="lazy"> <span>数学系</span></p>
+        </li>
+      </ul>
+    </section>
 
-    <table>
-      <tr>
-        <td align="center"> </td>
-        <td align="center">学校</td>
-        <td align="center"></td>
-        <td align="center">院系</td>
-        <td align="center">专业</td>
-        <td align="center">学位</td>
-        <td align="center">时间</td>
-      </tr>
+    <section class="section about-card" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">经历</h2>
+      <ol class="profile-list experience-list">
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/PCL.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>科研助理</h3>
+              <p class="profile-organization">鹏城国家实验室</p>
+            </div>
+            <p class="profile-date">2022年09月至2025年12月</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>部门</dt><dd>感知智能研究所， 网络智能部</dd></div>
+            <div><dt>职责</dt><dd>异常感知、网络智能、计算机视觉</dd></div>
+            <div><dt>认证</dt><dd>No.222030018</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/DEHOU.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>董事长助理</h3>
+              <p class="profile-organization">得厚资本集团</p>
+            </div>
+            <p class="profile-date">2019年10月至2020年09月</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>部门</dt><dd>投资部</dd></div>
+            <div><dt>职责</dt><dd>私募股权、并购、尽职调查、募资</dd></div>
+            <div><dt>认证</dt><dd>-</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/ALI.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>算法工程师</h3>
+              <p class="profile-organization">阿里云计算公司</p>
+            </div>
+            <p class="profile-date">2019年05月至2019年10月</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>部门</dt><dd>智能产品事业群， 云产品研发部</dd></div>
+            <div><dt>职责</dt><dd>智能调度、异常检测、内容分发网络（CDN）</dd></div>
+            <div><dt>认证</dt><dd>No.228854</dd></div>
+          </dl>
+        </li>
+        <li class="profile-record">
+          <div class="profile-record-heading">
+            <img class="profile-logo" src="../pictures/DTT.png" width="48" height="48" alt="" loading="lazy">
+            <div>
+              <h3>审计助理</h3>
+              <p class="profile-organization">德勤会计师事务所</p>
+            </div>
+            <p class="profile-date">2018年01月至2018年03月</p>
+          </div>
+          <dl class="experience-details">
+            <div><dt>部门</dt><dd>审计及鉴证部</dd></div>
+            <div><dt>职责</dt><dd>安东石油（03337.HK）年度审计工作底稿。<br>收入替代测试、与德勤全球交付中心协作处理函证、整理迪拜总部会议纪要</dd></div>
+            <div><dt>认证</dt><dd>No.140815</dd></div>
+          </dl>
+        </li>
+      </ol>
+    </section>
 
-      <tr>
-          <td align="center"> <img src="../pictures/UCAS.png" width="50" height="50" /> </td>
-          <td>中国科学院大学</td>
-          <td align="center"> <img src="../pictures/ICT.png" width="50" height="50" /> </td>
-          <td>中国科学院计算技术研究所</td>
-          <td>计算机科学与技术</td>
-          <td align="center">工学博士</td>
-          <td>2020年09月至2025年12月</td>
-      </tr>
-      <tr>
-          <td align="center"> <img src="../pictures/SDU.png" width="50" height="50" /> </td>
-          <td>山东大学</td>
-          <td align="center"> <img src="../pictures/MATH.png" width="50" height="25.2" /> </td>
-          <td align="center">数学系</td>
-          <td>计算数学</td>
-          <td align="center">理学学士</td>
-          <td>2016年09月至2020年06月</td>
-      </tr>
-    </table>
-</div>
-
-    <div class="section about-card">
-    <h2>经历</h2>
-    <hr />
-
-    <table>
-
-      <tr>
-        <td align="center"> </td>
-        <td align="center">单位</td>
-        <td align="center">认证</td>
-        <td align="center">部门</td>
-        <td align="center">岗位</td>
-        <td align="center">职责</td>
-        <td align="center">时间</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="../pictures/PCL.png" width="50" height="50" /> </td>
-        <td>鹏城国家实验室</td>
-        <td>No.222030018</td>
-        <td>感知智能研究所，<br>网络智能部</td>
-        <td>科研助理</td>
-        <td>异常感知、网络智能、计算机视觉</td>
-        <td>2022年09月至2025年12月</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="../pictures/DEHOU.png" width="50" height="50" /> </td>
-        <td>得厚资本集团</td>
-        <td>-</td>
-        <td>投资部</td>
-        <td>董事长助理</td>
-        <td>私募股权、并购、尽职调查、募资</td>
-        <td>2019年10月至2020年09月</td>
-      </tr>
-      <tr>
-        <td align="center"> <img src="../pictures/ALI.png" width="50" height="50" /> </td>
-        <td>阿里云计算公司</td>
-        <td>No.228854</td>
-        <td>智能产品事业群，<br>云产品研发部</td>
-        <td>算法工程师</td>
-        <td>智能调度、异常检测、内容分发网络（CDN）</td>
-        <td>2019年05月至2019年10月</td>
-
-      </tr>
-      <tr>
-        <td align="center"> <img src="../pictures/DTT.png" width="50" height="50" /> </td>
-        <td>德勤会计师事务所</td>
-        <td>No.140815</td>
-        <td>审计及鉴证部</td>
-        <td>审计助理</td>
-        <td>安东石油（03337.HK）年度审计工作底稿。<br>收入替代测试、与德勤全球交付中心协作处理函证、整理迪拜总部会议纪要</td>
-        <td>2018年01月至2018年03月</td>
-
-      </tr>
-    </table>
-</div>
-
-    <div class="section about-card">
-    <h2>代表性奖项</h2>
-    <hr />
-    <table>
-      <thead>
-        <tr><th scope="col">奖项</th><th scope="col">获奖比例</th><th scope="col">年份</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>北京市优秀毕业生</td><td>5.00%</td><td>2026</td></tr>
-        <tr><td>中国科学院大学优秀毕业生</td><td>5.00%</td><td>2026</td></tr>
-        <tr><td>博士国家奖学金</td><td>0.20%</td><td>2025</td></tr>
-        <tr><td>中国科学院大学三好学生</td><td>8.13%</td><td>2024</td></tr>
-        <tr><td>中国科学院大学三好学生</td><td>8.97%</td><td>2023</td></tr>
-        <tr><td>山东大学先进个人</td><td>0.27%</td><td>2018</td></tr>
-        <tr><td>德勤中国创新精英40强</td><td>0.02%</td><td>2017</td></tr>
-      </tbody>
-    </table>
-    <p class="section-more"><a href="awards_CN.html">查看全部奖项...</a></p>
-</div>
+    <section class="section about-card" aria-labelledby="selected-awards-heading">
+      <h2 id="selected-awards-heading">代表性奖项</h2>
+      <ol class="award-timeline">
+        <li class="award-year">
+          <time datetime="2026">2026</time>
+          <ul>
+            <li><span>北京市优秀毕业生</span><span class="award-rate">获奖比例 <strong>5.00%</strong></span></li>
+            <li><span>中国科学院大学优秀毕业生</span><span class="award-rate">获奖比例 <strong>5.00%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2025">2025</time>
+          <ul>
+            <li><span>博士国家奖学金</span><span class="award-rate">获奖比例 <strong>0.20%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2024">2024</time>
+          <ul>
+            <li><span>中国科学院大学三好学生</span><span class="award-rate">获奖比例 <strong>8.13%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2023">2023</time>
+          <ul>
+            <li><span>中国科学院大学三好学生</span><span class="award-rate">获奖比例 <strong>8.97%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2018">2018</time>
+          <ul>
+            <li><span>山东大学先进个人</span><span class="award-rate">获奖比例 <strong>0.27%</strong></span></li>
+          </ul>
+        </li>
+        <li class="award-year">
+          <time datetime="2017">2017</time>
+          <ul>
+            <li><span>德勤中国创新精英40强</span><span class="award-rate">获奖比例 <strong>0.02%</strong></span></li>
+          </ul>
+        </li>
+      </ol>
+      <p class="section-more"><a href="awards_CN.html">查看全部奖项...</a></p>
+    </section>
 
     <section class="section about-card" aria-labelledby="selected-papers-heading">
       <h2 id="selected-papers-heading">代表性论文</h2>
@@ -392,8 +418,11 @@
               <span class="paper-tile-title" id="selected-paper-1">面向鲁棒不可学习数据的小波域隐写</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>用小波子带保护训练数据</span>
-              <span class="paper-tile-venue">查看论文 →</span>
+              <span class="paper-tile-back-copy">
+                <span>用小波子带保护训练数据</span>
+                <span class="paper-tile-venue">查看论文 →</span>
+              </span>
+              <img src="../pictures/papers/wavelet-domain-steganography.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -404,8 +433,11 @@
               <span class="paper-tile-title" id="selected-paper-2">GSM：全局语义记忆</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>用全局语义识别异常</span>
-              <span class="paper-tile-venue">查看论文 →</span>
+              <span class="paper-tile-back-copy">
+                <span>用全局语义识别异常</span>
+                <span class="paper-tile-venue">查看论文 →</span>
+              </span>
+              <img src="../pictures/papers/global-semantic-memory.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -416,8 +448,11 @@
               <span class="paper-tile-title" id="selected-paper-3">面向鲁棒不可学习数据的 K 空间双谱隐写</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>用傅里叶双谱隐写保护训练数据</span>
-              <span class="paper-tile-venue">查看论文 →</span>
+              <span class="paper-tile-back-copy">
+                <span>用傅里叶双谱隐写保护训练数据</span>
+                <span class="paper-tile-venue">查看论文 →</span>
+              </span>
+              <img src="../pictures/papers/k-space-bispectrum-steganography.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
@@ -428,8 +463,11 @@
               <span class="paper-tile-title" id="selected-paper-4">面向无监督异常检测的记忆机制</span>
             </span>
             <span class="paper-tile-back" aria-hidden="true">
-              <span>通过记忆约束重建，识别异常</span>
-              <span class="paper-tile-venue">查看论文 →</span>
+              <span class="paper-tile-back-copy">
+                <span>通过记忆约束重建，识别异常</span>
+                <span class="paper-tile-venue">查看论文 →</span>
+              </span>
+              <img src="../pictures/papers/memory-mechanism.webp" width="144" height="88" alt="" loading="lazy" decoding="async">
             </span>
           </a>
         </li>
