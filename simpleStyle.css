@@ -543,8 +543,7 @@ table tr:hover {
   background: #eff6ff;
 }
 
-.publications-page a:focus-visible,
-.patent-table-scroll:focus-visible {
+.publications-page a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -553,21 +552,66 @@ table tr:hover {
   padding: clamp(16px, 3vw, 26px);
 }
 
-.patent-table-scroll {
-  overflow-x: auto;
+.patent-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.patent-table-scroll table {
-  min-width: 760px;
+.patent-card {
+  min-width: 0;
+  padding: clamp(12px, 2.5vw, 18px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fbfdff;
+  overflow-wrap: anywhere;
 }
 
-.patent-table-scroll :is(td, th) {
-  text-align: center;
+.patent-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  margin-bottom: 12px;
 }
 
-.patent-table-scroll td:nth-child(5) {
-  min-width: 180px;
-  text-align: left;
+.patent-heading h3 {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.patent-status {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #eef2f8;
+  color: #374765;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.patent-status.is-granted {
+  background: #e7f7ed;
+  color: #166534;
+}
+
+.patent-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+  gap: 8px 14px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.patent-details dt {
+  color: var(--muted);
+}
+
+.patent-details dd {
+  margin: 0;
 }
 
 @media (max-width: 600px) {
@@ -605,7 +649,11 @@ table tr:hover {
   text-decoration: underline;
 }
 
-.mentor-email {
+.publication-author {
+  white-space: nowrap;
+}
+
+.author-email {
   display: inline-block;
   margin-inline-start: 2px;
   padding: 0 2px;
@@ -704,11 +752,8 @@ table tr:hover {
 }
 
 .publication-figure {
+  min-width: 0;
   margin: 0;
-}
-
-.publication-figure a {
-  display: block;
   padding: 5px;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -719,15 +764,8 @@ table tr:hover {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  max-height: 230px;
   object-fit: contain;
-}
-
-.publication-figure figcaption {
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 12px;
-  text-align: center;
 }
 
 @media (hover: hover) {
