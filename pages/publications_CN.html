@@ -1,155 +1,185 @@
+<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>李嘉豪(Jiahao Li)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究成果 · 李嘉豪</title>
 <link rel="stylesheet" href="../simpleStyle.css">
 </head>
 <body>
 
 <div class="top-nav">
   <div class="nav-brand">
-    李嘉豪 <span>人工智能研究员</span>
+    李嘉豪 <span lang="en">AI Researcher</span>
   </div>
   <div class="nav-links">
     <a href="index_CN.html">简介</a>
-    <a href="awards_CN.html">奖项</a>
     <a class="active" href="publications_CN.html">成果</a>
+    <a href="awards_CN.html">奖项</a>
     <a href="projects_CN.html">项目</a>
     <a href="services_CN.html">服务</a>
     <a href="videos_CN.html">视频</a>
   </div>
 </div>
 
-<div class="content">
-  <div class="section">
-    <h2>论文</h2>
+<main class="content publications-page">
+  <header class="publications-header">
+    <h1>研究成果</h1>
+    <nav class="publication-jumps" aria-label="本页导航">
+      <a href="#papers">论文</a>
+      <a href="#patents">专利</a>
+    </nav>
+  </header>
+
+  <section id="papers" aria-labelledby="papers-title">
+    <h2 id="papers-title">论文</h2>
+    <div class="publication-list">
+      <article class="publication-card" id="wavelet-domain-steganography" aria-labelledby="wavelet-domain-steganography-title">
+        <div class="publication-meta">
+          <span class="publication-type">期刊论文</span>
+          <span>2026</span>
+        </div>
+        <h3 id="wavelet-domain-steganography-title"><a href="https://doi.org/10.1016/j.patcog.2026.114422" lang="en">Wavelet Domain Steganography for Robust Unlearnable Data</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋</p>
+        <p class="publication-venue">Pattern Recognition · Vol. 180, Part D · 114422</p>
+        <p class="publication-summary">将类别特定信号嵌入小波子带，在保留图像高频细节的同时干扰未经授权的模型训练，并在常见数据增强和对抗训练条件下验证保护效果。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.1016/j.patcog.2026.114422">论文原文</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="global-semantic-memory" aria-labelledby="global-semantic-memory-title">
+        <div class="publication-meta">
+          <span class="publication-type">期刊论文</span>
+          <span>2026</span>
+        </div>
+        <h3 id="global-semantic-memory-title"><a href="https://doi.org/10.1016/j.patcog.2025.111950" lang="en">GSM: Global Semantic Memory</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">Pattern Recognition · Vol. 169 · 111950 · 2025 年在线发表</p>
+        <p class="publication-summary">研究重建式检测器为何会漏检与正常样本共享局部特征的异常。通过级联记忆、可配置稀疏化和随机遗忘，在潜在空间中学习全局语义。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.1016/j.patcog.2025.111950">论文原文</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="k-space-bispectrum-steganography" aria-labelledby="k-space-bispectrum-steganography-title">
+        <div class="publication-meta">
+          <span class="publication-type">会议论文</span>
+          <span>2025</span>
+          <span class="publication-honor">口头报告</span>
+        </div>
+        <h3 id="k-space-bispectrum-steganography-title"><a href="https://doi.org/10.1145/3746027.3755349" lang="en">K-Space Bispectrum Steganography for Robust Unlearnable Data</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">ACM Multimedia (ACM MM)</p>
+        <p class="publication-summary">利用傅里叶双谱隐写，将类别信息嵌入图像的幅度谱和相位谱，在保持扰动难以察觉的同时，降低模型从受保护数据中学习有效信息的能力。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.1145/3746027.3755349">论文原文</a></li>
+          <li><a href="videos_CN.html#k-space-presentation">展示视频</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="contrast-memory" aria-labelledby="contrast-memory-title">
+        <div class="publication-meta">
+          <span class="publication-type">会议论文</span>
+          <span>2025</span>
+          <span class="publication-honor">IEEE SPS 2025 差旅资助</span>
+        </div>
+        <h3 id="contrast-memory-title"><a href="https://doi.org/10.1109/ICASSP49660.2025.10888471" lang="en">Contrast Memory for Unsupervised Anomaly Detection</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">IEEE ICASSP</p>
+        <p class="publication-summary">提出面向多变量时间序列的轻量模型 DiMER。通过对比记忆学习正常模式，并综合重建空间、时间空间和潜在空间的信息计算异常分数。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.1109/ICASSP49660.2025.10888471">论文原文</a></li>
+          <li><a href="videos_CN.html#contrast-memory-presentation">展示视频</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="hyman" aria-labelledby="hyman-title">
+        <div class="publication-meta">
+          <span class="publication-type">会议论文</span>
+          <span>2025</span>
+          <span class="publication-honor">IEEE SPS 2025 差旅资助</span>
+        </div>
+        <h3 id="hyman-title"><a href="https://doi.org/10.1109/ICASSP49660.2025.10890028" lang="en">HYMAN: Hybrid Memory and Attention Network for Unsupervised Anomaly Detection</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">IEEE ICASSP</p>
+        <p class="publication-summary">用注意力捕捉多变量时间序列中的短期依赖，用记忆模块保留长期模式，并结合时序特征与潜在特征评估异常。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.1109/ICASSP49660.2025.10890028">论文原文</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="survey-unlearnable-data" aria-labelledby="survey-unlearnable-data-title">
+        <div class="publication-meta">
+          <span class="publication-type">预印本</span>
+          <span>2025</span>
+        </div>
+        <h3 id="survey-unlearnable-data-title"><a href="https://arxiv.org/abs/2503.23536" lang="en">A Survey on Unlearnable Data</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">arXiv:2503.23536</p>
+        <p class="publication-summary">梳理不可学习数据的生成方法、公开基准、评估指标和应用场景，并比较保护强度、视觉保真度、计算效率与鲁棒性之间的权衡。</p>
+        <ul class="publication-links">
+          <li><a href="https://arxiv.org/abs/2503.23536">arXiv</a></li>
+          <li><a href="https://arxiv.org/pdf/2503.23536">PDF</a></li>
+          <li><a href="https://github.com/LiJiahao-Alex/Awesome-UnLearnable-Data">综述资源</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="cascade-memory" aria-labelledby="cascade-memory-title">
+        <div class="publication-meta">
+          <span class="publication-type">会议论文</span>
+          <span>2024</span>
+          <span class="publication-honor">口头报告</span>
+        </div>
+        <h3 id="cascade-memory-title"><a href="https://doi.org/10.3233/FAIA240822" lang="en">Cascade Memory for Unsupervised Anomaly Detection</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰、谷洋、蓝湘源</p>
+        <p class="publication-venue">ECAI</p>
+        <p class="publication-summary">提出用于学习全局语义的级联记忆架构，通过稀疏化和随机遗忘缓解模型对异常样本的过度泛化。</p>
+        <ul class="publication-links">
+          <li><a href="https://doi.org/10.3233/FAIA240822">论文原文</a></li>
+          <li><a href="https://github.com/LiJiahao-Alex/Cascade-Memory">代码</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="memory-mechanism" aria-labelledby="memory-mechanism-title">
+        <div class="publication-meta">
+          <span class="publication-type">会议论文</span>
+          <span>2023</span>
+          <span class="publication-honor">UAI 2023 奖学金</span>
+        </div>
+        <h3 id="memory-mechanism-title"><a href="https://proceedings.mlr.press/v216/li23a.html" lang="en">Memory Mechanism for Unsupervised Anomaly Detection</a></h3>
+        <p class="publication-authors"><strong>李嘉豪</strong>、陈益强、邢云冰</p>
+        <p class="publication-venue">UAI · PMLR 216 · pp. 1219–1229</p>
+        <p class="publication-summary">用容量受控的可微记忆存储典型正常模式，并通过检索这些模式，限制重建模型对未见异常的重建能力。</p>
+        <ul class="publication-links">
+          <li><a href="https://proceedings.mlr.press/v216/li23a.html">论文原文</a></li>
+          <li><a href="https://proceedings.mlr.press/v216/li23a/li23a.pdf">PDF</a></li>
+          <li><a href="https://www.auai.org/uai2023/posters/80.pdf">海报</a></li>
+        </ul>
+      </article>
+
+      <article class="publication-card" id="digital-twin-fault-detection" aria-labelledby="digital-twin-fault-detection-title">
+        <div class="publication-meta">
+          <span class="publication-type">期刊论文</span>
+          <span>2019</span>
+        </div>
+        <h3 id="digital-twin-fault-detection-title"><a href="https://intjit.org/cms/journal/volume/25/2/252_4.pdf" lang="en">Digital Twin for Fault Detection Based on Hybrid Neural Networks</a></h3>
+        <p class="publication-authors">潘志文、<strong>李嘉豪</strong>、陈益强、Salim Hariri、Jesus Pacheco、宋晓锋</p>
+        <p class="publication-venue">International Journal of Information Technology · Vol. 25, No. 2</p>
+        <p class="publication-summary">结合卷积自编码器与 LSTM 建模工业系统的正常行为，通过实际观测与预测之间的偏差识别故障，并在安全水处理基准上进行评估。</p>
+        <ul class="publication-links">
+          <li><a href="https://intjit.org/cms/journal/volume/25/2/252_4.pdf">PDF</a></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section patents-section" id="patents" aria-labelledby="patents-title">
+    <h2 id="patents-title">专利</h2>
     <hr />
 
+    <div class="patent-table-scroll" role="region" tabindex="0" aria-labelledby="patents-title">
       <table>
-        <tr>
-            <td align="center">标题</td>
-            <td align="center">出版</td>
-            <td align="center">地区</td>
-            <td align="center">赞助商</td>
-            <td align="center">评级</td>
-            <td align="center">时间</td>
-            <td align="center">作者</td>
-         </tr>
-
-
-
-          <tr>
-            <td>Wavelet Domain Steganography for Robust Unlearnable Data</td>
-            <td>《模式识别》（PR）</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>JCR Q1，IF=7.5，CCF B</td>
-            <td>2026</td>
-            <td><b>李嘉豪</b>、陈益强、邢云冰、谷洋</td>
-          </tr>
-
-          <tr>
-            <td>K-Space Bispectrum Steganography for Robust Unlearnable Data⭐</td>
-            <td>第33届ACM国际多媒体会议（MM 2025）</td>
-            <td>都柏林，爱尔兰</td>
-            <td>华为、谷歌</td>
-            <td>CORE A*, CCF A, QUALIS A1, CAAI A, 全文</td>
-            <td>2025</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>GSM: Global Semantic Memory</td>
-            <td>《模式识别》（PR）</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>JCR Q1，IF=7.5，CCF B</td>
-            <td>2025</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>A Survey on Unlearnable Data</td>
-            <td>arXiv</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>2025</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>Contrast Memory for Unsupervised Anomaly Detection🏆</td>
-            <td>第50届IEEE声学、语音和信号处理国际会议（ICASSP 2025）</td>
-            <td>海得拉巴，印度</td>
-            <td>微软</td>
-            <td>CORE B, CAAI B, CCF B, QUALIS A1, 4页全文，录用率未列出（投稿量 7,500+）</td>
-            <td>2025</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>HYMAN: Hybrid Memory and Attention Network for Unsupervised Anomaly Detection🏆</td>
-            <td>第50届IEEE声学、语音和信号处理国际会议（ICASSP 2025）</td>
-            <td>海得拉巴，印度</td>
-            <td>微软</td>
-            <td>CORE B, CAAI B, CCF B, QUALIS A1, 4页全文，录用率未列出（投稿量 7,500+）</td>
-            <td>2025</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>Cascade Memory for Unsupervised Anomaly Detection⭐</td>
-            <td>第27届欧洲人工智能会议（ECAI 2024）</td>
-            <td>西班牙，圣地亚哥德孔波斯特拉</td>
-            <td>微软，谷歌云，EuroAI</td>
-            <td>CORE A, CAAI B, CCF B, QUALIS A2, 7页全文，录用率23%（547/2344）</td>
-            <td>2024</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰, 谷洋, 蓝湘源</td>
-          </tr>
-
-          <tr>
-            <td>Memory Mechanism for Unsupervised Anomaly Detection🏆</td>
-            <td>第39届人工智能不确定性会议（UAI 2023）</td>
-            <td>美国，宾夕法尼亚州，匹兹堡</td>
-            <td>谷歌DeepMind，摩根大通，IBM研究院</td>
-            <td>CORE A, CAAI A, CCF B, QUALIS A1, 9页全文，录用率31%（243/778）</td>
-            <td>2023</td>
-            <td><b>李嘉豪</b>, 陈益强, 邢云冰</td>
-          </tr>
-
-          <tr>
-            <td>Digital Twin for Fault Detection Based on Hybrid Neural Networks</td>
-            <td>《国际信息技术期刊》第25卷第2期</td>
-            <td>新加坡</td>
-            <td>南洋理工大学</td>
-            <td>13页全文</td>
-            <td>2019</td>
-            <td>潘志文, <b>李嘉豪</b>, 陈益强, Salim Hariri, Jesus Pacheco, 宋晓锋</td>
-          </tr>
-        </table>
-        <br>
-        🏆 UAI 2023 奖学金<br>
-        ⭐ 口头报告<br>
-        🏆 SPS 2025 差旅资助
-  </div>
-
-  <div class="section">
-    <h2>专利</h2>
-    <hr />
-
-      <table>
-        <style>
-          td {
-            text-align: center;
-          }
-          td:nth-child(5) { /* 选择第五列 (发明名称) */
-            text-align: left; /* 发明名称列左对齐 */
-          }
-          th {
-            text-align: center;
-          }
-        </style>
         <tr>
           <th>申请号</th>
           <th>公开号</th>
@@ -271,8 +301,9 @@
           <td>发明</td>
         </tr>
       </table>
-     </div>     
-  </div>
+    </div>
+  </section>
+</main>
 
 
 
